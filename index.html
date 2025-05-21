@@ -6,7 +6,7 @@
     <style>
         @font-face {
             font-family: 'YourCustomFont';
-            src: url('bnfont.ttf') format('truetype');
+            src: url('Kobiguru.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -14,35 +14,62 @@
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
         }
 
         .sign {
             font-family: 'YourCustomFont', Arial, sans-serif;
             font-size: 36px;
-            padding: 10px;
-            margin-top: 20px;
-            border: 1px dashed #ccc;
+            padding: 10px 20px;
+            margin-top: 30px;
+            border: 1px dashed #999;
             display: inline-block;
+            background: #fff;
         }
     </style>
 </head>
 <body>
 
-<h2>বাংলা সিগনেচার তৈরি করো</h2>
+    <h2>বাংলা সিগনেচার তৈরি করো</h2>
 
-<!-- ❌ form বাদ দিয়ে শুধু input + button রাখো -->
-<label for="name_bn">তোমার নাম (বাংলায়):</label><br>
-<input type="text" name="name_bn" id="name_bn" value="আল আমিন" required>
-<button onclick="generateSignature()">সিগনেচার দেখাও</button>
+    <label for="name_bn">তোমার নাম (বাংলায়):</label><br>
+    <input type="text" name="name_bn" id="name_bn" value="আল আমিন" required>
+    <button onclick="generateSignature()">সিগনেচার দেখাও</button>
 
-<div class="sign" id="signature">আল আমিন</div>
+    <div class="sign" id="signature">আল আমিন</div>
 
-<script>
-    function generateSignature() {
-        const name = document.getElementById('name_bn').value;
-        document.getElementById('signature').innerText = name;
-    }
-</script>
+    <script>
+        function generateSignature() {
+            const name = document.getElementById('name_bn').value;
+            document.getElementById('signature').innerText = name;
+        }
+    </script>
 
 </body>
 </html>
