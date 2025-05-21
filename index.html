@@ -6,7 +6,7 @@
     <style>
         @font-face {
             font-family: 'YourCustomFont';
-            src: url('Kobiguru.ttf') format('truetype');
+            src: url('bnfont.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -30,13 +30,19 @@
 
 <h2>বাংলা সিগনেচার তৈরি করো</h2>
 
-<form method="POST">
-    <label for="name_bn">তোমার নাম (বাংলায়):</label><br>
-    <input type="text" name="name_bn" id="name_bn" value="আগস্টিন" required>
-    <button type="submit">সিগনেচার দেখাও</button>
-</form>
+<!-- ❌ form বাদ দিয়ে শুধু input + button রাখো -->
+<label for="name_bn">তোমার নাম (বাংলায়):</label><br>
+<input type="text" name="name_bn" id="name_bn" value="আল আমিন" required>
+<button onclick="generateSignature()">সিগনেচার দেখাও</button>
 
-    <div class="sign">আগস্টিন</div>
+<div class="sign" id="signature">আল আমিন</div>
+
+<script>
+    function generateSignature() {
+        const name = document.getElementById('name_bn').value;
+        document.getElementById('signature').innerText = name;
+    }
+</script>
 
 </body>
 </html>
