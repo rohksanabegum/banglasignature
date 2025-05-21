@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Signature Generator</title>
+    <style>
+        @font-face {
+            font-family: 'YourCustomFont';
+            src: url('Kobiguru.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .sign {
+            font-family: 'YourCustomFont', Arial, sans-serif;
+            font-size: 36px;
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px dashed #ccc;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<h2>বাংলা সিগনেচার তৈরি করো</h2>
+
+<form method="POST">
+    <label for="name_bn">তোমার নাম (বাংলায়):</label><br>
+    <input type="text" name="name_bn" id="name_bn" value="আগস্টিন" required>
+    <button type="submit">সিগনেচার দেখাও</button>
+</form>
+
+    <div class="sign">আগস্টিন</div>
+
+</body>
+</html>
